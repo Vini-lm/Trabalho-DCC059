@@ -1,0 +1,9 @@
+#ifndef TRABALHO_DCC059_GRAFO_H
+#define TRABALHO_DCC059_GRAFO_H
+
+
+class Grafo {
+};
+
+
+#endif //TRABALHO_DCC059_GRAFO_H
