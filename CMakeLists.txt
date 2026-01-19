@@ -5,7 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Trabalho_DCC059 main.cpp
         Grafo.cpp
-        Grafo.h
-        No.cpp
-        No.h
+        Utils.cpp
 )
