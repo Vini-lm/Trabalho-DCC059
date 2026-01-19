@@ -72,3 +72,5 @@ Testing/
 .vscode/settings.json
 .idea/editor.xml
 
+results.txt
+results_color.txt
