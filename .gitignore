@@ -66,3 +66,9 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+.idea
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+.idea/editor.xml
+
