@@ -1,7 +1,5 @@
 #include "Grafo.h"
 
-
-
 Grafo::Grafo(int nVertices)
 {
     this->n = nVertices;
@@ -30,8 +28,15 @@ int Grafo::getNumArestas()
 {
     return this->a;
 }
-const vector<int>& Grafo::getVizinhos()
+const vector<int>& Grafo::getVizinhos(int u)
 {
+    if( u < 0 || u >= n)
+    {
+        static vector<int> vazia;
+        return vazia;
+    }
+
+    return this->adjList[u];
 
 }
 int Grafo::getGrau(int u)
@@ -49,5 +54,7 @@ int Grafo::getColor(int v)
 
 void Grafo::setColor(int v, int color)
 {
-
+    if(v >= 0 && v < n){
+        this->colors[v] = color;
+    }
 }
