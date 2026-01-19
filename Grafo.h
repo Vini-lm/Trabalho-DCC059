@@ -24,7 +24,7 @@ public:
     void addAresta(int u, int v);
     int getNumVertices();
     int getNumArestas();
-    const vector<int>& getVizinhos();
+    const vector<int>& getVizinhos(int u);
     int getGrau(int u);
     int getColor(int v);
     
