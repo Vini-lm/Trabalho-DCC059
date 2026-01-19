@@ -60,3 +60,27 @@ Grafo *Utils::readAndCreate(string filePath)
 
     return grafo;
 }
+
+
+void Grafo::saveAndExport(Grafo* g,string filePath)
+{
+    ofstream outFile(filePath);
+
+
+    if(!outFile.is_open())
+    {
+        cout << "Erro!" << endl;
+        return;
+    }
+
+    for(int i = 0; i < g->getNumVertices(); i++)
+    {
+        int cor = g->getColor(i);
+        outFile << (i + 1) << " " << cor << endl;
+    }
+
+    outFile.close();
+    cout << "Solução salva com sucesso em: " << filePath << endl;
+
+
+}
