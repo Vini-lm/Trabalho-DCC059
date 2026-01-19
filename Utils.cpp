@@ -62,7 +62,7 @@ Grafo *Utils::readAndCreate(string filePath)
 }
 
 
-void Grafo::saveAndExport(Grafo* g,string filePath)
+void Utils::saveAndExport(Grafo* g,string filePath)
 {
     ofstream outFile(filePath);
 
