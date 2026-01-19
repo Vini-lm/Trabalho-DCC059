@@ -58,3 +58,15 @@ void Grafo::setColor(int v, int color)
         this->colors[v] = color;
     }
 }
+
+string Grafo::getAresta(int u, int v)
+{
+    if(u < 0 || u >= this->n)
+        return "";
+
+    for(int vizinho : this->adjList[u])
+        if(vizinho == v)
+            return to_string(u) + " " + to_string(v);
+    
+    return "";
+}

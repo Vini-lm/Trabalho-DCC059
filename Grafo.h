@@ -27,6 +27,7 @@ public:
     const vector<int>& getVizinhos(int u);
     int getGrau(int u);
     int getColor(int v);
+    string getAresta(int u, int v);
     
 
 
