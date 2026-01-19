@@ -5,5 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Trabalho_DCC059 main.cpp
         Grafo.cpp
+        Algoritimos.cpp
         Utils.cpp
 )

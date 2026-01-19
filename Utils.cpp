@@ -12,7 +12,7 @@ Utils::~Utils()
 
 
 
-Grafo *Utils::readAndCreate(string filePath)
+Grafo *Utils::readAndCreate(string filePath, int p, int q)
 {
     ifstream inFile;
 
@@ -43,7 +43,7 @@ Grafo *Utils::readAndCreate(string filePath)
         }
     }
 
-    grafo = new Grafo(numVertices);
+    grafo = new Grafo(numVertices, p, q);
     cout << "Grafo criado com " << numVertices << " Vertices." << endl;
 
     while (getline(inFile, l))

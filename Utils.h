@@ -14,7 +14,7 @@ public:
     Utils();
     ~Utils();
 
-    static Grafo* readAndCreate(string filePath);
+    static Grafo* readAndCreate(string filePath, int p = 2, int q = 1);
 };
 
 
