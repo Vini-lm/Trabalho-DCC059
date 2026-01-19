@@ -62,7 +62,7 @@ Grafo *Utils::readAndCreate(string filePath)
 }
 
 
-void Utils::saveAndExport(Grafo* g,string filePath)
+void Utils::saveAndExport(Grafo* g,string filePath, int option)
 {
     ofstream outFile(filePath);
 
@@ -72,11 +72,24 @@ void Utils::saveAndExport(Grafo* g,string filePath)
         cout << "Erro!" << endl;
         return;
     }
-
-    for(int i = 0; i < g->getNumVertices(); i++)
+    int n = g->getNumVertices();
+    for(int i = 0; i < n; i++)
     {
         int cor = g->getColor(i);
-        outFile << (i + 1) << " " << cor << endl;
+       // outFile << (i + 1) << " " << cor << endl;
+       for(int j = 0; j < n; j++){
+
+        string aresta = g->getAresta(i,j);
+        if(aresta != "")
+        {
+            if(option == 1)
+                outFile << aresta << " " << cor << endl;
+            else
+                outFile << aresta << endl;
+        }
+
+       }
+            
     }
 
     outFile.close();

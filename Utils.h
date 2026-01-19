@@ -15,7 +15,7 @@ public:
     ~Utils();
 
     static Grafo* readAndCreate(string filePath);
-    static void saveAndExport(Grafo* g,string filePath);
+    static void saveAndExport(Grafo* g,string filePath, int option = 0);
 };
 
 
