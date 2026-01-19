@@ -26,7 +26,7 @@ public:
     void adicionarAresta(int u, int v);
     int getNumVertices() const;
     int getNumArestas();
-    const vector<int>& getVizinhos();
+    const vector<int>& getVizinhos(int u);
     int getGrau(int u);
     int getColor(int v);
     void setColor(int v, int cor);
@@ -34,6 +34,10 @@ public:
     bool corEhSegura(int u, int corTentativa, const vector<int>& coresAtuais);
     int obterMenorCorValida(int u, const vector<int>& cores);
     void imprimirSolucaoDOT(const vector<int>& cores, string titulo);
+    string getAresta(int u, int v);
+    
+
+
 };
 
 enum Colors {

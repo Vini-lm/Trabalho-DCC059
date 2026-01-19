@@ -47,11 +47,16 @@ int Grafo::getNumArestas()
 {
     return this->a;
 }
-
-const vector<int>& Grafo::getVizinhos()
+const vector<int>& Grafo::getVizinhos(int u)
 {
-    static vector<int> empty;
-    return empty;
+    if( u < 0 || u >= n)
+    {
+        static vector<int> vazia;
+        return vazia;
+    }
+
+    return this->adjList[u];
+
 }
 
 int Grafo::getGrau(int u)
@@ -69,7 +74,7 @@ int Grafo::getColor(int v)
 
 void Grafo::setColor(int v, int color)
 {
-    if(v >= 0 && v < n) {
+    if(v >= 0 && v < n){
         this->colors[v] = color;
     }
 }
@@ -121,4 +126,15 @@ void Grafo::imprimirSolucaoDOT(const vector<int>& cores, string titulo)
         }
     }
     cout << "}\n\n";
+}
+string Grafo::getAresta(int u, int v)
+{
+    if(u < 0 || u >= this->n)
+        return "";
+
+    for(int vizinho : this->adjList[u])
+        if(vizinho == v)
+            return to_string(u) + " " + to_string(v);
+    
+    return "";
 }
