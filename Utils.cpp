@@ -76,7 +76,6 @@ void Utils::saveAndExport(Grafo* g,string filePath, int option)
     for(int i = 0; i < n; i++)
     {
         int cor = g->getColor(i);
-       // outFile << (i + 1) << " " << cor << endl;
        for(int j = 0; j < n; j++){
 
         string aresta = g->getAresta(i,j);
