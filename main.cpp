@@ -70,7 +70,7 @@ void processarInstancia(string filename) {
     cout << "PROCESSANDO: " << filename << endl;
     cout << "========================================" << endl;
 
-    Grafo* g = Utils::readAndCreate("../" + filename); 
+    Grafo* g = Utils::readAndCreate("../instances/" + filename); 
     
     if (!g) {
         cerr << "Erro ao abrir arquivo de entrada: " << filename << endl;
