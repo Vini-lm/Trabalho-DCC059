@@ -15,7 +15,7 @@ private:
     vector<vector<int>> adjList;
     vector<int> colors;
 
-    void setColor(int v, int cor);
+    
  
 
 
@@ -28,12 +28,13 @@ public:
     int getGrau(int u);
     int getColor(int v);
     string getAresta(int u, int v);
+    void resetColors();
+    void setColor(int v, int cor);
+    int countDefects(int v);
     
 
 
 };
-
-
 
 enum Colors {
     VERMELHO,
@@ -48,5 +49,4 @@ enum Colors {
     ROXO
 };
 
-
-#endif //TRABALHO_DCC059_GRAFO_H
+#endif

@@ -70,3 +70,21 @@ string Grafo::getAresta(int u, int v)
     
     return "";
 }
+
+
+
+void Grafo::resetColors() {
+    this->colors.assign(n, -1);
+}
+
+
+int Grafo::countDefects(int v) {
+    if (colors[v] == -1) return 0;
+    int defects = 0;
+    for (int vizinho : adjList[v]) {
+        if (colors[vizinho] == colors[v]) {
+            defects++;
+        }
+    }
+    return defects;
+}
