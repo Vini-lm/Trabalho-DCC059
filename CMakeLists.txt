@@ -3,7 +3,8 @@ project(Trabalho_DCC059)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Trabalho_DCC059 main.cpp
+add_executable(Trabalho_DCC059
+        main.cpp
         Grafo.cpp
         Utils.cpp
-)
+        Solver.cpp)
